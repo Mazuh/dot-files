@@ -1,6 +1,11 @@
 #!/bin/bash
 
-BASICS=('git' 'vim' 'tmux' 'firefox' 'code' 'spotify')
+BASICS=('git' 'vim' 'tmux' 'firefox' 'code' 'spotify' 'curl' 'python2' 'python3')
+
+if [ "$EUID" != 0 ]; then
+	echo "You need super user permission to run this script."
+	exit 1
+fi
 
 if [ `which apt-get` ]; then
 	echo "'apt-get' found! Trying to update sources list."
