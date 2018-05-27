@@ -1,7 +1,8 @@
 #!/bin/bash
 
 BASICS=('tmux' 'vim' 'git' 'mercurial' 'meld' 'firefox' 'code'\
-	'spotify' 'curl' 'python2' 'python3' 'python-pip' 'python3-pip')
+	'spotify' 'curl' 'python2' 'python3' 'python-pip' 'python3-pip'\
+	'gimp', 'xserver-xorg-input-wacom')
 
 if [ "$EUID" != 0 ]; then
 	echo "You need super user permission to run this script."
