@@ -6,9 +6,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'xero/blaquemagick.vim'
 call vundle#end() 
 
+" theme
 colorscheme desert
 
 " indent per file type
@@ -18,6 +18,9 @@ autocmd Filetype html setlocal sts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal sts=2 sw=2 expandtab
 autocmd Filetype python setlocal sts=4 sw=4 expandtab
 autocmd Filetype json setlocal sts=4 sw=4 expandtab
+autocmd Filetype css setlocal sts=2 sw=2 expandtab
+autocmd Filetype scss setlocal sts=2 sw=2 expandtab
+
 
 " syntax highlighting
 syntax on
@@ -33,6 +36,7 @@ set number
 
 " highlight the current row containing the cursor
 set cursorline
+highlight CursorLine cterm=bold
 
 " fuzzy search as ctrl+P
 set rtp+=/usr/local/opt/fzf
