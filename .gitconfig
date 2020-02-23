@@ -1,0 +1,6 @@
+[user]
+        name = mazuh
+        email = marcell@example.com
+[core]
+        editor = vim
+        excludesfile = ~/.gitignore_global
