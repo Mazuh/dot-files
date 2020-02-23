@@ -1,6 +1,6 @@
 [ui]
 username = Marcell Guilherme <marcell@example.com>
-ignore = ~/.hgignore
+ignore = ~/.hgignore_global
 
 [diff]
 git=True
