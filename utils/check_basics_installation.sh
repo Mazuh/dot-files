@@ -1,8 +1,8 @@
 #!/bin/bash
 
-BASICS=('tmux' 'vim' 'git' 'mercurial' 'meld' 'firefox' 'code'\
-	'spotify' 'curl' 'python2' 'python3' 'python-pip' 'python3-pip'\
-	'gimp', 'xserver-xorg-input-wacom')
+BASICS=('tmux' 'vim' 'git' 'mercurial' 'firefox' 'code'\
+	'curl' 'python2' 'python3' 'python-pip' 'python3-pip'\
+	'gimp', 'xserver-xorg-input-wacom' 'gparted' 'gnome-tweak-tool')
 
 if [ "$EUID" != 0 ]; then
 	echo "You need super user permission to run this script."
@@ -13,6 +13,7 @@ BIN_CHECKER="which"
 
 if [ `which apt-get` ]; then
 	echo -n "'apt-get' found. Trying to update sources list (may take a while)... "
+	add-apt-repository universe
 	apt-get update --yes &> /dev/null
 	update_err=$?
 	if [ update_err = 0 ]; then
